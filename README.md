@@ -6,6 +6,13 @@
 
 - To start with Event we have to install a package which coming with NestJs
 
-<h6><b> npm i @nestjs/event-emitter </b></h6>
+<p><b> npm i @nestjs/event-emitter </b></p>
 
 - Then import them in app.module.ts in import properts as <b>EventEmitterModule.forRoot()</b>
+
+<h3>Task Scheduling</h3>
+
+-To start with Task Scheduling Install the below nestjs package
+
+<p><b>npm install --save @nestjs/schedule</b></p>
+<p><b>npm install --save -dev @types/cron</b></p>
