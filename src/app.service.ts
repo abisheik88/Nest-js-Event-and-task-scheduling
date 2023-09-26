@@ -22,4 +22,11 @@ export class AppService {
   WelcomeUserEvent(payload: UserEvent) {
     this.logger.log('Welcoming New User', payload.email);
   }
+
+  @OnEvent('user.created', { async: true })
+  async WelcomeGift(payload: UserEvent) {
+    this.logger.log('Welcome gift is processing', payload.email);
+    await new Promise<void>((resolve) => setTimeout(() => resolve(), 5000));
+    this.logger.log('Gift Sent', payload.email);
+  }
 }
