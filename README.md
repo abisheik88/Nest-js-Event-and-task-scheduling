@@ -5,12 +5,9 @@
 <h3>Task Scheduling</h3>
 
 <h5>Task Scheduling:</h5>
-<p>
-<ul>
-<li>It allows us to schedule methods/function to execute at a particular time intervals.</li>
-<li>In linux Os it comes with the package called cron which handles the task scheduling</li>
-<li>In Nest Js</li>
-</ul>
+<p>-It allows us to schedule methods/function to execute at a particular time intervals.-In linux Os it comes with the package called cron which handles the task scheduling.
+-In Nest Js it comes with the package called @nestjs/schedule which popularly integrated with cron package.
+
 </p>
 
 -To start with Task Scheduling Install the below nestjs package
@@ -20,7 +17,7 @@
 
 - Then in app.module.ts in import property import them as <b>ScheduleModule.forRoot()</b>
 
--The module can take some options objects.
+-The Schedulemodule can take some options objects.
 
 <h3> Events </h3>
 
