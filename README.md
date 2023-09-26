@@ -5,10 +5,8 @@
 <h3>Task Scheduling</h3>
 
 <h5>Task Scheduling:</h5>
-<p>-It allows us to schedule methods/function to execute at a particular time intervals.-In linux Os it comes with the package called cron which handles the task scheduling.
+-It allows us to schedule methods/function to execute at a particular time intervals.-In linux Os it comes with the package called cron which handles the task scheduling.
 -In Nest Js it comes with the package called @nestjs/schedule which popularly integrated with cron package.
-
-</p>
 
 -To start with Task Scheduling Install the below nestjs package
 
