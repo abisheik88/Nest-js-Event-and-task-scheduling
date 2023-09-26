@@ -5,17 +5,54 @@
 <h3>Task Scheduling</h3>
 
 <h5>Task Scheduling:</h5>
--It allows us to schedule methods/function to execute at a particular time intervals.-In linux Os it comes with the package called cron which handles the task scheduling.
--In Nest Js it comes with the package called @nestjs/schedule which popularly integrated with cron package.
+- It allows us to schedule methods/function to execute at a particular time intervals.
 
--To start with Task Scheduling Install the below nestjs package
+- In linux Os it comes with the package called cron which handles the task scheduling.
+
+- In Nest Js it comes with the package called @nestjs/schedule which popularly integrated with cron package.
+
+- To start with Task Scheduling Install the below nestjs package
 
 <p><b>npm install --save @nestjs/schedule</b></p>
 <p><b>npm install --save -dev @types/cron</b></p>
 
 - Then in app.module.ts in import property import them as <b>ScheduleModule.forRoot()</b>
 
--The Schedulemodule can take some options objects.
+- The Schedulemodule can take some options objects.
+
+- To use the task scheduling with the decorator provided from <b>@nestjs/schedule</b> <i>@Cron()</i>
+
+- Inside the Cron Decorator we can use cron patterns \* \* \* \* \* \* => Every asterisk have some particular value of things coming from left
+
+- day in week , months , day of month , Hour , minutes , seconds
+
+1. To make a particular thing at the particular time we use
+
+<code>
+ @Cron('10 * * * * *')
+  generaterandom() {
+    const data = Math.floor(Math.random() * 10);
+    this.logger.log('New random Number in every minute 10th second....', data);
+  }
+</code>
+
+2. To make things recursively for every particular interval
+
+<code>
+@Interval(10000)
+  generateRecursively() {
+    this.logger.warn('generate every 10 seconds once');
+  }
+</code>
+
+3.To make this work once after the specified time when the method run
+
+<code>
+ @Timeout(10000)
+  generateaftertenth() {
+    this.logger.verbose('Called once after 10th seconds');
+  }
+</code>
 
 <h3> Events </h3>
 
